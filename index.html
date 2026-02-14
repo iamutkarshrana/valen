@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -103,4 +104,111 @@
     <script src="script.js"></script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Images Container -->
+    <div class="background-images" id="backgroundImages"></div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div class="screen active" id="welcomeScreen">
+            <div class="welcome-content">
+                <h1 class="main-title">Hey Love! ❤️</h1>
+                <p class="subtitle">I've got a little something for you. Just a few fun games to unlock a surprise...
+                </p>
+                <button class="btn-primary" onclick="startJourney()">Let's Go Gauraaa!</button>
+            </div>
+        </div>
+
+        <!-- Game Selection Screen -->
+        <div class="screen" id="gameSelectionScreen">
+            <div class="game-selection">
+                <h2>Pick a Game</h2>
+                <div class="game-cards">
+                    <div class="game-card" onclick="startGame('wordle')">
+                        <div class="game-icon">📝</div>
+                        <h3>Wordle</h3>
+                        <p>Guess the 5-letter word (it's easy, promise!)</p>
+                        <span class="status" id="wordleStatus">Not yet!</span>
+                    </div>
+                    <div class="game-card" onclick="startGame('matcher')">
+                        <div class="game-icon">🎴</div>
+                        <h3>Photo Match</h3>
+                        <p>Find the matching pics of us!</p>
+                        <span class="status" id="matcherStatus">Not yet!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wordle Game Screen -->
+        <div class="screen" id="wordleScreen">
+            <div class="game-container">
+                <button class="btn-back" onclick="backToSelection()">← Nah, go back</button>
+                <h2>Guess the Word!</h2>
+                <p class="game-hint">Hint: I want you my ❤️</p>
+                <div id="wordleBoard" class="wordle-board"></div>
+                <div class="keyboard" id="keyboard"></div>
+                <div id="wordleMessage" class="message"></div>
+            </div>
+        </div>
+
+        <!-- Image Matcher Game Screen -->
+        <div class="screen" id="matcherScreen">
+            <div class="game-container">
+                <button class="btn-back" onclick="backToSelection()">← Nah, go back</button>
+                <h2>Match Our Pics!</h2>
+                <p class="game-hint">Find all the matching pairs to complete the heart!</p>
+                <div class="matcher-stats">
+                    <span>Moves: <strong id="moves">0</strong></span>
+                    <span>Pairs Found: <strong id="pairsFound">0</strong>/16</span>
+                </div>
+                <div id="matcherBoard" class="matcher-board"></div>
+                <div id="matcherMessage" class="message"></div>
+            </div>
+        </div>
+
+        <!-- Final Message Screen -->
+        <div class="screen" id="finalScreen">
+            <div class="final-content">
+                <div id="fadingMessages" class="fading-messages"></div>
+                <div id="proposalImage" class="proposal-image hidden">
+                    <img src="src/img/unnamed.jpg" alt="Will you be my Valentine?" id="proposalImg">
+                    <h2 class="proposal-question">Will You Be My Valentine? OR Perhaps Marry Me? 💍</h2>
+                    <div class="proposal-buttons">
+                        <button class="btn-yes" onclick="handleYesClick()">YESS! I Love You 😍</button>
+                        <button class="btn-no" id="btnNo" onmouseover="moveButton()" onclick="moveButton()">Neverrr! Noo
+                            Nooo 😝</button>
+                    </div>
+                </div>
+                <div id="celebration" class="celebration hidden">
+                    <h1 class="big-love">I LOVE YOU TOOOO GAURA PAURAA ❤️</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+>>>>>>> 7f311131065a8153900cf916efa381977984d57a
 </html>
